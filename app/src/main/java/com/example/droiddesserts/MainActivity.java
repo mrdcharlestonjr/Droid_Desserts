@@ -33,6 +33,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageView iceCreamSandwichImageView = findViewById(R.id.ice_cream_image_view);
+        iceCreamSandwichImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                orderMessage = getString(R.string.ice_cream_sandwich_message);
+                displayToast(orderMessage);
+                intentToSecondWithMessage();
+            }
+        });
+
+        ImageView froyoImageView = findViewById(R.id.froyo_image_view);
+        froyoImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                orderMessage = getString(R.string.froyo_message);
+                displayToast(orderMessage);
+                intentToSecondWithMessage();
+            }
+        });
+
 
 
 

@@ -4,4 +4,6 @@
     <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
     <string name="froyo">Froyo is premium self-served frozen yogurt.</string>
     <string name="donut_message">You ordered a donut.</string>
+    <string name="ice_cream_sandwich_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_message">You ordered a froyo.</string>
 </resources>
