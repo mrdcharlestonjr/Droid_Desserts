@@ -21,13 +21,37 @@
         android:id="@+id/order_received_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:textSize="14sp"
-        android:text="@string/app_name"
+        tools:text="@string/app_name"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/receipt_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_name"
+        android:textSize="14sp"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_received_text_view"
+
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Enter your name."
+        app:layout_constraintBottom_toBottomOf="@+id/receipt_label_name"
+        app:layout_constraintStart_toEndOf="@+id/receipt_label_name"
+        app:layout_constraintTop_toTopOf="@+id/receipt_label_name"
+
         />
 
 

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_received_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        tools:text="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded"
+        />
+
+    <TextView
+        android:id="@+id/receipt_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_name"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_received_text_view"
+        tools:ignore="RtlHardcoded"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/enter_your_name_here"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@id/receipt_label_name"
+        app:layout_constraintStart_toEndOf="@id/receipt_label_name"
+        tools:ignore="Autofill,RtlHardcoded"
+
+        />
+    <TextView
+        android:id="@+id/address_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_address"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receipt_label_name"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/enter_your_address_here"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        app:layout_constraintBaseline_toBaselineOf="@id/address_label_name"
+        app:layout_constraintStart_toEndOf="@id/address_label_name"
+        tools:ignore="Autofill,RtlHardcoded"
+        />
+    <TextView
+        android:id="@+id/address_phone_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_phone"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_label_name"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/enter_your_phone_number_here"
+        android:inputType="phone"
+        android:ems="10"
+        app:layout_constraintBaseline_toBaselineOf="@id/address_phone_name"
+        app:layout_constraintStart_toEndOf="@id/address_label_name"
+        tools:ignore="Autofill,RtlHardcoded"
+        />
+
+    <TextView
+        android:id="@+id/receipt_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_note"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_phone_name"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/enter_your_note_here"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        app:layout_constraintBaseline_toBaselineOf="@id/receipt_note"
+        app:layout_constraintStart_toEndOf="@id/receipt_note"
+        tools:ignore="Autofill,RtlHardcoded"
+        />
+
+    <TextView
+        android:id="@+id/receipt_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_a_delivery_method"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receipt_note"
+        tools:ignore="RtlHardcoded" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receipt_delivery">
+
+
+        <RadioButton
+            android:id="@+id/same_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/same_day_messenger_service"
+            android:layout_marginStart="21dp"
+            android:textSize="14sp"
+            android:onClick="onRadioButtonClicked"
+
+        />
+        <RadioButton
+            android:id="@+id/next_day_ground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_day_ground_service"
+            android:layout_marginStart="21dp"
+            android:textSize="14sp"
+            android:onClick="onRadioButtonClicked"
+
+            />
+        <RadioButton
+            android:id="@+id/pick_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_up"
+            android:layout_marginStart="21dp"
+            android:textSize="14sp"
+            android:onClick="onRadioButtonClicked"
+
+            />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
